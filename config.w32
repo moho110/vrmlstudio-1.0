@@ -1,0 +1,7 @@
+ARG_ENABLE('vrmlstudio', 'vrmlstudio support', 'no');
+
+if (PHP_VRMLSTUDIO != 'no') {
+	AC_DEFINE('HAVE_VRMLSTUDIO', 1, 'vrmlstudio support enabled');
+
+	EXTENSION('vrmlstudio', 'vrmlstudio.c', null, '/DZEND_ENABLE_STATIC_TSRMLS_CACHE=1');
+}
